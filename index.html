@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="assets/js/chart.js"></script>
+
+    <!-- bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- END bootstrap -->
+
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,12 +60,6 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -159,11 +167,9 @@
         <div class="cd-timeline-content">
           <h2>Professional Poker Player</h2>
           <ul>
-            <li>Played over two million lifetime poker hands, consistently beating the most competitive online cash games</li>
-            <li>Several major online tournament wins including a Full Tilt $200 buy in for $156,000 and a Pokerstars $100 buy in for $66,000</li>
-            <li>Final tabled the $2500HA (Hold’em/Omaha) World Series of Poker tournament in 2011</li>
-            <li>Typically played over 12 tables simultaneously, equating to over 1,000 hands/hour</li>
-            <li>Specialied in short handed no limit holdem cash games</li>
+            <li> <a href="#"  id="pokergraphLink"> Consistent winner over two million poker hands </a></li>
+            <li>Several major online tournament wins including a Full Tilt $200 buy in for $156,000</li>
+            <li>Final tabled the $2500HA World Series of Poker tournament in 2011</li>
           </ul>
           <span class="cd-date">January 2008 - October 2012</span>
         </div> <!-- cd-timeline-content -->
@@ -202,5 +208,33 @@
         <h4 class="mtb">Developer productivity tool to check available acceptance environments to deploy completed work for QA</h4>
       </div><!--/col-md-6-->
     </div><!--/row -->
+
+    <div id="pokerWinningsModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="graph">
+              <div id='pokerGraph' style='height: 800px; margin: auto'></div>
+            </div>
+            <div id="definitions">
+              <h3>
+                Big Blind
+              </h3>
+              <div>
+                A big blind normalizes values between stakes. The games shown here ranged from big blinds of $1 ($100 buy in) to big blinds of $50($5,000 buy in) with the majority of hands in the $6($600 buy in) - $10($1000 buy in) range. By using
+                a measurement of big blind you are able to compare winnings across various games
+              </div>
+              </br>
+              <div>
+                 For example if I win $1 in a game where the big blind is $1 and then $50 in a game where the big blind is $50, the graph will increase by 2 units.
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
   </body>
 </html>
