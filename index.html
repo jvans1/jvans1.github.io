@@ -24,7 +24,12 @@
     <link rel="stylesheet" href="timeline/css/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="timeline/css/style.css"> <!-- Resource style -->
     <!-- end timeline -->
+    <link rel="stylesheet" href="assets/css/custom.css"> <!-- Resource style -->
 
+
+    <!-- spinner -->
+    <link rel="stylesheet" href="assets/css/spinner.css"> <!-- CSS reset -->
+    <!-- end spinner -->
 
     <title>James Vanneman</title>
 
@@ -54,6 +59,8 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="http://haskellthoughts.com">Blog</a></li>
           </ul>
@@ -74,155 +81,175 @@
     </div><!--/H -->
 
     <!-- ********** FIRST PART ********** -->
-    <div class="container">
+    <div id="about" class="container">
       <div class="row mtb">
-        <div class="col-md-8 col-md-offset-2 centered">
+        <div class="col-xs-4 col-xs-offset-4 centered">
           <h1>About</h1>
           <img src="assets/img/goodnine-2.jpg" class="img-responsive img-circle"/>
-          <ul class="list list-inline">
+          <ul class="hidden-xs list list-inline">
             <li><a href="https://twitter.com/jvans1" target="_blank"> <i class="fa fa-twitter-square fa-5x" href="#"></i></a></li>
             <li><a href="https://www.facebook.com/james.vanneman" target="_blank"> <i class="fa fa-facebook-square fa-5x" href="#"></i></a></li>
             <li><a href="https://www.linkedin.com/in/james-vanneman-60896a57" target="_blank"> <i class="fa fa-linkedin-square fa-5x" href="#"></i></a></li>
           </ul>
+          <ul class="visible-xs list list-inline">
+            <li><a href="https://twitter.com/jvans1" target="_blank"> <i class="fa fa-twitter-square" href="#"></i></a></li>
+            <li><a href="https://www.facebook.com/james.vanneman" target="_blank"> <i class="fa fa-facebook-square" href="#"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/james-vanneman-60896a57" target="_blank"> <i class="fa fa-linkedin-square " href="#"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 centered">
           <h2>James Vanneman</h2>
           <h3>Software Engineer</h3>
-          <h4 class="mtb">Passionate about functional programming, in particular Haskell. The Majority of my experience is in Ruby, building Ruby on Rails applications and REST API's. I have extensive frontend javascript experience as well working on personal projects in AngularJS and large ReactJS applications for work.  </h4>
+          <h4 class="mtb">I'm passionate about writing code. I particularly enjoy Haskell. I have a lot of experience building Ruby on Rails applications and REST API's. I also have extensive frontend javascript experience working with both AngularJS and ReactJS.</h4>
         </div>
       </div><!--/row -->
     </div><!--/container -->
 
     <!-- ********** SECOND PART ********** -->
-    <section id="cd-timeline" class="cd-container">
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-        </div> <!-- cd-timeline-img -->
-        <div class="cd-timeline-content">
-          <h2>Hacker Paradise</h2>
-          <ul>
-            <li> Joined <a href="http://hackerparadise.org" target="_blank"> group of traveling developers and designers </a> </li>
-            <li> <a href="https://github.com/jvans1/haskell_servers" target="_blank">Implemented web servers</a> with different concurrency models to get a better grasp on concurrency and the low level implementation of web servers</li>
-            <li> <a href="http://haskellthoughts.com/blog/2016/06/30/lessons-from-c-programming/" target="_blank"> Learned C</a> to understand what happens under the hood</li>
-            <li> <a href="https://github.com/jvans1/compiler" target="_blank"> Wrote a compiler </a> for a simple language</li>
-            <li> Decided to <a href="https://github.com/jvans1/lang" target="_blank"> write my own </a> typed functional programming language (WIP)</li>
-          </ul>
-          <span class="cd-date">June 2016 - Present</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
+    <div id="experience" class="container">
+      <div class="row mtb">
+        <div class="col-xs-4 col-xs-offset-4 centered">
+          <h1>Experience</h1>
+        </div>
+        <div class="col-xs-12">
+          <section id="cd-timeline" class="cd-container">
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-picture">
+              </div> <!-- cd-timeline-img -->
+              <div class="cd-timeline-content">
+                <h2>Hacker Paradise</h2>
+                <ul>
+                  <li> Joined <a href="http://hackerparadise.org"> group of traveling developers and designers </a> </li>
+                  <li> <a href="https://github.com/jvans1/haskell_servers">Implemented web servers</a> with different concurrency models to get a better grasp on concurrency and the low level implementation of web servers</li>
+                  <li> <a href="http://haskellthoughts.com/blog/2016/06/30/lessons-from-c-programming/"> Learned C</a> to understand what happens under the hood</li>
+                  <li> <a href="https://github.com/jvans1/lang"> Wrote my own </a> typed functional programming language (WIP)</li>
+                </ul>
+                <span class="cd-date">June 2016 - Present</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-        </div> <!-- cd-timeline-img -->
-        <div class="cd-timeline-content">
-          <h2>Ruby / Javascript Developer - Gust</h2>
-          <ul>
-            <li> Adhered to a disciplined extreme programming style, always TDD'ing features and pair programming</li>
-            <li> Worked extensively with ReactJS building a new product from the ground up</li>
-            <li> Designed and implemented efficient, restful API's to work with the React application</li>
-            <li> Automated internal processes to make the team more efficient </li>
-          </ul>
-          <span class="cd-date">September 2014 - June 2016</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-picture">
+              </div> <!-- cd-timeline-img -->
+              <div class="cd-timeline-content">
+                <h2>Ruby / Javascript Developer - Gust</h2>
+                <ul>
+                  <li> Adhered to strict TDD and pair programming practices</li>
+                  <li> Worked extensively with ReactJS building an entirely new product</li>
+                  <li> Designed and implemented rest API's for the React application</li>
+                </ul>
+                <span class="cd-date">September 2014 - June 2016</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-        </div> <!-- cd-timeline-img -->
-        <div class="cd-timeline-content">
-          <h2>Ruby Developer - Concierge Live</h2>
-          <ul>
-            <li>Designed and built a customized Salesforce integration to sync data via their API</li>
-            <li>Designed and implemented secondary market integration to list tickets from third parties</li>
-            <li>Restructured ~45 database indexes to be more efficient and free up memory</li>
-          </ul>
-          <span class="cd-date">January 2013 - Septemer 2014</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-picture">
+              </div> <!-- cd-timeline-img -->
+              <div class="cd-timeline-content">
+                <h2>Ruby Developer - Concierge Live</h2>
+                <ul>
+                  <li>Designed and built a customized Salesforce integration to sync data via their API</li>
+                  <li>Designed and implemented secondary market integration to list tickets from third parties</li>
+                  <li>Optimized postgres database indexes to be more performant and free up memory</li>
+                </ul>
+                <span class="cd-date">January 2013 - Septemer 2014</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-        </div> <!-- cd-timeline-img -->
-        <div class="cd-timeline-content">
-          <h2>Flatiron School</h2>
-          <ul>
-            <li>Joined The Flatiron School to pursue a passion for coding</li>
-          </ul>
-          <span class="cd-date">October 2012 - January 2013</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-picture">
+              </div> <!-- cd-timeline-img -->
+              <div class="cd-timeline-content">
+                <h2>Flatiron School</h2>
+                <ul>
+                  <li>Joined The Flatiron School to pursue a passion for coding</li>
+                </ul>
+                <span class="cd-date">October 2012 - January 2013</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-        </div> <!-- cd-timeline-img -->
-        <div class="cd-timeline-content">
-          <h2>Professional Poker Player</h2>
-          <ul>
-            <li> <a href="#"  id="pokergraphLink"> Consistent winner over two million poker hands </a></li>
-            <li>Several major online tournament wins including a Full Tilt $200 buy in for $156,000</li>
-            <li>Final tabled the $2500HA World Series of Poker tournament in 2011</li>
-          </ul>
-          <span class="cd-date">May 2009 - October 2012</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-picture">
+              </div> <!-- cd-timeline-img -->
+              <div class="cd-timeline-content">
+                <h2>Professional Poker Player</h2>
+                <ul>
+                  <li> <a href="#"  id="pokergraphLink"> Consistent winner over two million poker hands </a></li>
+                  <li>Several major online tournament wins</li>
+                  <li>Final tabled the $2500HA World Series of Poker tournament in 2011</li>
+                </ul>
+                <span class="cd-date">May 2009 - October 2012</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
 
-      <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-        </div> <!-- cd-timeline-img -->
-        <div class="cd-timeline-content">
-          <h2>Emory University</h2>
-          <p>BA, Mathematics</p>
-          <span class="cd-date">September 2005 - May 2009</span>
-        </div> <!-- cd-timeline-content -->
-      </div> <!-- cd-timeline-block -->
-    </section> <!-- cd-timeline -->
-    <div class="row mtb2">
-      <div class="col-md-12">
-        <h1 class="text-center">Projects</h1>
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-img cd-picture">
+              </div> <!-- cd-timeline-img -->
+              <div class="cd-timeline-content">
+                <h2>Emory University</h2>
+                <p>BA, Mathematics</p>
+                <span class="cd-date">September 2005 - May 2009</span>
+              </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+          </section> <!-- cd-timeline -->
+        </div>
       </div>
     </div>
-    <div class="row mtb2">
-      <div class="col-md-6 col-md-offset-3">
-        <h2><a  href="https://github.com/jvans1/lang" target="_blank"> My Programming Language </a></h2>
-        <h4 class="mtb">The beginnings of writing my own statically typed, functional programming language</h4>
-      </div><!--/col-md-6-->
-    </div><!--/row -->
-    <div class="row mtb2">
-      <div class="col-md-6 col-md-offset-3">
-        <h2><a  href="https://github.com/jvans1/yesod_maven_weekly" target="_blank"> Maven Weekly </a></h2>
-        <h4 class="mtb">Chrome extension and webapp allowing friends to create groups based on interests and share relevant content via a weekly newsletter </h4>
-      </div><!--/col-md-6-->
-    </div><!--/row -->
-    <div class="row mtb2">
-      <div class="col-md-6 col-md-offset-3">
-        <h2><a  href="https://github.com/zephyr-dev/openenvs" target="_blank"> Openenvs </a></h2>
-        <h4 class="mtb">Developer productivity tool to check available acceptance environments to deploy completed work for QA</h4>
-      </div><!--/col-md-6-->
+      <div id="projects"  class="container">
+        <div class="row mtb2">
+          <div class="col-md-12">
+            <h1 class="text-center">Projects</h1>
+          </div>
+        <div class="col-md-6 col-md-offset-3">
+          <h2><a  href="https://github.com/jvans1/lang" target="_blank"> My Programming Language </a></h2>
+          <h4 class="mtb">The beginnings of writing my own statically typed, functional programming language</h4>
+        </div><!--/col-md-6-->
+        <div class="col-md-6 col-md-offset-3">
+          <h2><a  href="https://github.com/jvans1/yesod_maven_weekly" target="_blank"> Maven Weekly </a></h2>
+          <h4 class="mtb">Chrome extension and webapp allowing friends to create groups based on interests and share relevant content via a weekly newsletter </h4>
+        </div><!--/col-md-6-->
+        <div class="col-md-6 col-md-offset-3">
+          <h2><a  href="https://github.com/zephyr-dev/openenvs" target="_blank"> Openenvs </a></h2>
+          <h4 class="mtb">Developer productivity tool to check available acceptance environments to deploy completed work for QA</h4>
+        </div>
+      </div>
     </div><!--/row -->
 
+    <div id="contact" class="row mtb">
+      <div class="col-xs-4 col-xs-offset-4 centered">
+        <h1>Contact</h1>
+        <p>
+          Get in touch with me at jvannem@gmail.com
+        </p>
+      </div>
+    </div>
     <div id="pokerWinningsModal" class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-body">
+
             <div class="graph">
-              <div id='pokerGraph' style='height: 800px; margin: auto'></div>
+              <div id='pokerGraph'  style='height: 800px; margin: auto'></div>
             </div>
             <div id="definitions">
               <h3>
-                Big Blind
+                Description
               </h3>
               <div>
-                A big blind normalizes values between stakes. The games shown here ranged from big blinds of $1 ($100 buy in) to big blinds of $50($5,000 buy in) with the majority of hands in the $6($600 buy in) - $10($1000 buy in) range. By using
-                a measurement of big blind you are able to compare winnings across various games
+                These hands represent all of my online cash game hands played from 2008 - 2012
+                 The unit of measurment on the Y axis is a "big blind". I played in games where the big blind
+                ranged from $1 up to games with a big blind of $50. Using a big blind as measurement normalizes the dollar value won and allows
+                you to compare the games.
               </div>
               </br>
               <div>
-                 For example if I win $1 in a game where the big blind is $1 and then $50 in a game where the big blind is $50, the graph will increase by 2 units.
+                 If I win $1 in a game where the big blind is $1 and then $50 in a game where the big blind is $50, the graph will increase by 2 units.
               </div>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
+          </div> </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
   </body>
