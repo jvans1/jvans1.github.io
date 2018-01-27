@@ -12,6 +12,20 @@
         ga('create', 'UA-35722536-5', 'auto');
         ga('send', 'pageview');
     </script>
+    <script>
+      /**
+      * Function that tracks a click on an outbound link in Analytics.
+      * This function takes a valid URL string as an argument, and uses that URL string
+      * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+      * using 'navigator.sendBeacon' in browser that support it.
+      */
+          var trackOutboundLink = function(url) {
+               ga('send', 'event', 'outbound', 'click', url, {
+                      'transport': 'beacon',
+                           'hitCallback': function(){document.location = url;}
+                         });
+          }
+    </script>
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 
     <!-- bootstrap -->
@@ -68,10 +82,10 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about"  onclick="trackOutboundLink('about'); return false;" >About</a></li>
+            <li><a href="#experience" onclick="trackOutboundLink('experience'); return false;" >Experience</a></li>
+            <li><a href="#projects" onclick="trackOutboundLink('projects'); return false;" >Projects</a></li>
+            <li><a href="#contact" onclick="trackOutboundLink('contact'); return false;" >Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -97,16 +111,16 @@
           <h1>About</h1>
           <img src="assets/img/goodnine-2.jpg" class="img-responsive img-circle"/>
           <ul class="hidden-xs list list-inline">
-            <li><a href="https://twitter.com/jvans1" > <i class="fa fa-twitter-square fa-5x" href="#"></i></a></li>
-            <li><a href="https://www.facebook.com/james.vanneman" > <i class="fa fa-facebook-square fa-5x" href="#"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/james-vanneman-60896a57" > <i class="fa fa-linkedin-square fa-5x" href="#"></i></a></li>
-            <li><a href="https://github.com/jvans1" > <i class="fa fa-github-square fa-5x" href="#"></i></a></li>
+            <li><a href="https://twitter.com/jvans1"  onclick="trackOutboundLink('https://twitter.com/jvans1'); return false;" > <i class="fa fa-twitter-square fa-5x" href="#"></i></a></li>
+            <li><a href="https://www.facebook.com/james.vanneman"  onclick="trackOutboundLink('https://www.facebook.com/james.vanneman'); return false;" > <i class="fa fa-facebook-square fa-5x" href="#"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/james-vanneman-60896a57"  onclick="trackOutboundLink('https://www.linkedin.com/in/james-vanneman-60896a57'); return false;" > <i class="fa fa-linkedin-square fa-5x" href="#"></i></a></li>
+            <li><a href="https://github.com/jvans1" onclick="trackOutboundLink('https://github.com/jvans1'); return false;"  > <i class="fa fa-github-square fa-5x" href="#"></i></a></li>
           </ul>
           <ul class="visible-xs list list-inline">
-            <li><a href="https://twitter.com/jvans1" > <i class="fa fa-twitter-square" href="#"></i></a></li>
-            <li><a href="https://www.facebook.com/james.vanneman" > <i class="fa fa-facebook-square" href="#"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/james-vanneman-60896a57" > <i class="fa fa-linkedin-square " href="#"></i></a></li>
-            <li><a href="https://github.com/jvans1" > <i class="fa fa-github-square " href="#"></i></a></li>
+            <li><a href="https://twitter.com/jvans1" onclick="trackOutboundLink('https://twitter.com/jvans1'); return false;"  > <i class="fa fa-twitter-square" href="#"></i></a></li>
+            <li><a href="https://www.facebook.com/james.vanneman" onclick="trackOutboundLink('https://www.facebook.com/james.vanneman'); return false;" > <i class="fa fa-facebook-square" href="#"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/james-vanneman-60896a57" onclick="trackOutboundLink('https://www.linkedin.com/in/james-vanneman-60896a57'); return false;" > <i class="fa fa-linkedin-square " href="#"></i></a></li>
+            <li><a href="https://github.com/jvans1" onclick="trackOutboundLink('https://github.com/jvans1'); return false;" > <i class="fa fa-github-square " href="#"></i></a></li>
           </ul>
         </div>
         <div class="col-xs-8 col-xs-offset-2 centered">
@@ -132,7 +146,7 @@
                 <h2>Microsoft - Software Engineer</h2>
                 <ul>
                   <li>  Designed a multi-region distributed caching strategy  </li>
-                  <li>  Implemented a <a href="https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf">leasing mechanism  </a> to prevent thundering herds on our database </li>
+                  <li>  Implemented a <a onclick="trackOutboundLink('https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf'); return false;"  href="https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf">leasing mechanism  </a> to prevent thundering herds on our database </li>
                 </ul>
                 <span class="cd-date">April 2017 - Present</span>
               </div> <!-- cd-timeline-content -->
@@ -144,10 +158,10 @@
               <div class="cd-timeline-content">
                 <h2>Bradfield School of Computer Science</h2>
                 <ul>
-                  <li> <a href="https://bradfieldcs.com/courses/distributed-systems/"> Distributed Systems </a> </li>
-                  <li> <a href="https://bradfieldcs.com/courses/operating-systems/">Operating Systems</a> </li>
-                  <li> <a href="https://bradfieldcs.com/courses/networking/"> Networking </a> </li>
-                  <li> <a href="https://bradfieldcs.com/courses/databases/"> Databases </a> </li>
+                  <li> <a href="https://bradfieldcs.com/courses/distributed-systems/" onclick="trackOutboundLink('https://bradfieldcs.com/courses/distributed-systems/'); return false;"> Distributed Systems </a> </li>
+                  <li> <a href="https://bradfieldcs.com/courses/operating-systems/" onclick="trackOutboundLink('https://bradfieldcs.com/courses/operating-systems/'); return false;">Operating Systems</a> </li>
+                  <li> <a href="https://bradfieldcs.com/courses/networking/" onclick="trackOutboundLink('https://bradfieldcs.com/courses/networking/'); return false;"> Networking </a> </li>
+                  <li> <a href="https://bradfieldcs.com/courses/databases/" onclick="trackOutboundLink('https://bradfieldcs.com/courses/databases/'); return false;"> Databases </a> </li>
                 </ul>
                 <span class="cd-date">February 2017 - April 2017</span>
               </div> <!-- cd-timeline-content -->
@@ -159,10 +173,10 @@
               <div class="cd-timeline-content">
                 <h2>Hacker Paradise</h2>
                 <ul>
-                  <li> Joined <a href="http://hackerparadise.org"> group of traveling developers and designers </a> </li>
-                  <li> <a href="https://github.com/jvans1/haskell_servers">Implemented web servers</a> with different concurrency models to get a better grasp on concurrency and the low level implementation of web servers</li>
-                  <li> <a href="http://haskellthoughts.com/blog/2016/06/30/lessons-from-c-programming/"> Learned C</a> to understand what happens under the hood</li>
-                  <li> <a href="https://github.com/jvans1/lang"> Wrote my own </a> typed functional programming language (WIP)</li>
+                  <li> Joined <a onclick="trackOutboundLink('http://hackerparadise.org'); return false;" href="http://hackerparadise.org"> group of traveling developers and designers </a> </li>
+                  <li> <a href="https://github.com/jvans1/haskell_servers" onclick="trackOutboundLink('https://github.com/jvans1/haskell_servers'); return false;">Implemented web servers</a> with different concurrency models to get a better grasp on concurrency and the low level implementation of web servers</li>
+                  <li> <a href="http://haskellthoughts.com/blog/2016/06/30/lessons-from-c-programming/" onclick="trackOutboundLink('http://haskellthoughts.com/blog/2016/06/30/lessons-from-c-programming/'); return false;"> Learned C</a> to understand what happens under the hood</li>
+                  <li> <a href="https://github.com/jvans1/lang" onclick="trackOutboundLink('https://github.com/jvans1/lang'); return false;"> Wrote my own </a> typed functional programming language (WIP)</li>
                 </ul>
                 <span class="cd-date">June 2016 - August 2016</span>
               </div> <!-- cd-timeline-content -->
@@ -214,7 +228,7 @@
               <div class="cd-timeline-content">
                 <h2>Professional Poker Player</h2>
                 <ul>
-                  <li> <a href="#"  id="pokergraphLink"> Consistent winner over two million poker hands </a></li>
+                  <li> <a href="#"  id="pokergraphLink" onclick="trackOutboundLink('pokergraph'); return false;"> Consistent winner over two million poker hands </a></li>
                   <li>Several major online tournament wins</li>
                   <li>Final tabled the $2500HA World Series of Poker tournament in 2011</li>
                 </ul>
@@ -241,27 +255,27 @@
             <h1 class="text-center">Projects</h1>
           </div>
         <div class="col-md-6 col-md-offset-3">
-          <h2><a  href="https://github.com/jvans1/neural-network-style-generation/blob/master/Style%20Transfer.ipynb" > A Neural Algorithm of Artistic Style Implementation</a></h2>
+          <h2><a  href="https://github.com/jvans1/neural-network-style-generation/blob/master/Style%20Transfer.ipynb"  onclick="trackOutboundLink('https://github.com/jvans1/neural-network-style-generation/blob/master/Style%20Transfer.ipynb'); return false;"> A Neural Algorithm of Artistic Style Implementation</a></h2>
           <p class="label label-warning">Machine Learning</p>
           <h4 class="mtb">Paper implementation that leverages neural networks to transfers the style of one image to the content of another</h5>
         </div><!--/col-md-6-->
         <div class="col-md-6 col-md-offset-3">
-          <h2><a  href="https://github.com/jvans1/lang" > My Programming Language </a></h2>
+          <h2><a  href="https://github.com/jvans1/lang" onclick="trackOutboundLink('https://github.com/jvans1/lang'); return false;" > My Programming Language </a></h2>
           <p class="label label-success">Code</p>
           <h4 class="mtb">The beginnings of writing my own statically typed, functional programming language</h4>
         </div><!--/col-md-6-->
         <div class="col-md-6 col-md-offset-3">
-          <h2><a  href="http://paradiseinporto.com" > Paradise In Porto </a></h2>
+          <h2><a  href="http://paradiseinporto.com" onclick="trackOutboundLink('http://paradiseinporto.com'); return false;"> Paradise In Porto </a></h2>
           <span class="label label-primary">Photography</span>
           <h4 class="mtb">Photography project capturing the participants of Hacker Paradise Porto </h4>
         </div><!--/col-md-6-->
         <div class="col-md-6 col-md-offset-3">
-          <h2><a  href="https://github.com/jvans1/yesod_maven_weekly" > Maven Weekly </a></h2>
+          <h2><a  href="https://github.com/jvans1/yesod_maven_weekly" onclick="trackOutboundLink('https://github.com/jvans1/yesod_maven_weekly'); return false;"> Maven Weekly </a></h2>
           <span class="label label-success">Code</span>
           <h4 class="mtb">Chrome extension and webapp allowing friends to create groups based on interests and share relevant content via a weekly newsletter </h4>
         </div><!--/col-md-6-->
         <div class="col-md-6 col-md-offset-3">
-          <h2><a  href="https://github.com/zephyr-dev/openenvs/tree/free" > Openenvs </a></h2>
+          <h2><a  href="https://github.com/zephyr-dev/openenvs/tree/free" onclick="trackOutboundLink('https://github.com/zephyr-dev/openenvs/tree/free'); return false;" > Openenvs </a></h2>
           <span class="label label-success">Code</span>
           <h4 class="mtb">Developer productivity tool to check available acceptance environments to deploy completed work for QA</h4>
         </div>
@@ -272,7 +286,7 @@
       <div class="col-xs-4 col-xs-offset-4 centered">
         <h1>Contact</h1>
         <p>
-          Get in touch with me at jvannem@gmail.com
+          Get in touch with me at jvannem[at]gmail.com
         </p>
       </div>
     </div>
@@ -290,7 +304,7 @@
               </h3>
               <div>
                 These hands represent all of my online cash game hands played from 2008 - 2012
-                The unit of measurment on the Y axis is a <a  href="https://en.wikipedia.org/wiki/Blind_(poker)"> big blind</a>. I played in games where the big blind
+                The unit of measurment on the Y axis is a <a  href="https://en.wikipedia.org/wiki/Blind_(poker)" onclick="trackOutboundLink('https://en.wikipedia.org/wiki/Blind_(poker)'); return false;"> big blind</a>. I played in games where the big blind
                 ranged from $1 up to games with a big blind of $50. Using a big blind as measurement normalizes the dollar value won and allows
                 you to compare the games.
               </div>
