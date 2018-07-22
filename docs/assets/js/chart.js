@@ -2,7 +2,7 @@ $(function () {
   var graphElement = $("#pokerGraph");
   var chartSetup = false;
   var data;
-  $.get('http://s3.amazonaws.com/jamesallhands/averaged_results_3.json.gz').then(function(result){
+  $.get('https://s3.amazonaws.com/jamesallhands/averaged_results_3.json.gz').then(function(result){
     data = result;
   });
 
